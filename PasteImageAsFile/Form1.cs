@@ -30,11 +30,6 @@ namespace PasteImageAsFile
             this.WindowState = FormWindowState.Normal;
         }
 
-        private void Preferences_Resize(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnOk_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.format = cbxFormat.Text;
