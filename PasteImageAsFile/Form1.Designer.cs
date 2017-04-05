@@ -109,6 +109,7 @@
             this.Name = "Preferences";
             this.Text = "Preferences - Image Paster";
             this.Load += new System.EventHandler(this.Preferences_Load);
+            this.Shown += new System.EventHandler(this.Preferences_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -19,9 +19,13 @@ namespace PasteImageAsFile
 
         private void Preferences_Load(object sender, EventArgs e)
         {
-            this.Hide();
             cbxFormat.Text = Properties.Settings.Default.format;
             ImagePaster ip = new ImagePaster();
+        }
+
+        private void Preferences_Shown(object sender, EventArgs e)
+        {
+            this.Hide();
         }
 
         private void systray_MouseDoubleClick(object sender, MouseEventArgs e)

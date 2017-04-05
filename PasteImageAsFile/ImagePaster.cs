@@ -14,13 +14,15 @@ namespace PasteImageAsFile
     class ImagePaster
     {
         private IntPtr hookId = IntPtr.Zero;
+        private LowLevelKeyboardProc proc;
         private bool lCtrl = false; // "LControlKey"
         private bool rCtrl = false; // "RControlKey"
 
 
         public ImagePaster()
         {
-            hookId = SetHook(HookCallback);
+            proc = HookCallback;
+            hookId = SetHook(proc);
         }
 
         private void Paste()
