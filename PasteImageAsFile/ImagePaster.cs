@@ -13,8 +13,9 @@ namespace PasteImageAsFile
 {
     class ImagePaster
     {
+        private static LowLevelKeyboardProc proc;
+
         private IntPtr hookId = IntPtr.Zero;
-        private LowLevelKeyboardProc proc;
         private bool lCtrl = false; // "LControlKey"
         private bool rCtrl = false; // "RControlKey"
 
